@@ -1,0 +1,32 @@
+button.tsx
+
+vite-project/src/components/button.tsx
+import { Children } from "react";
+import { ReactNode } from "react";
+
+interface Props {
+    children: React.ReactNode; 
+}
+
+const Button = ({ children }: Props) => {
+    return (
+        <button className="btn btn-primary">
+        {children}
+        </button>
+    )
+    }
+
+export default Button;
+
+App
+import Button from "./components/button";
+function App(){
+    return (
+        <div >
+            <Button>
+                Click Me
+            </Button>
+        </div>
+    );
+}
+export default App;
